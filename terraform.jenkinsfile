@@ -27,7 +27,7 @@ pipeline {
     stage('TF Apply') {
       steps {
         withAWS(credentials: 'japneet-aws') {
-          sh 'terraform apply -input=false'
+          sh 'terraform apply -auto-approve'
         }
       }
     }
